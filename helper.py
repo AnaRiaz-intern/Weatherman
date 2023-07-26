@@ -137,9 +137,8 @@ def Find_Low_temp(data):
     if not data:
         print("No data available :(\n")
     lowest_temp = 0
-    # max temp on the coldest day
-    max_temp_on_coldest_day = 0
     low_temp_day = None
+    max_temp_on_coldest_day = 0
     for entry in data:
         temp = entry.get_lowest_temp()
         if (lowest_temp == 0) or (temp < lowest_temp):
