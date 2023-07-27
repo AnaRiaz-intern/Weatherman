@@ -4,7 +4,12 @@ import os
 import sys
 
 
-# input command line -> python -e 2002 /path/to/filesFolder
+# input command line shoud be in this format for various cases:
+# case -e -> python -e 2002 /path/to/filesFolder
+# case -a -> python -e 2002/9 /path/to/filesFolder
+# case -c -> python -e 2004/7 /path/to/filesFolder
+# case -d -> python -e 2004/5 /path/to/filesFolder
+
 n = len(sys.argv)
 print("Total arguments passed:", n)
 current_path = os.getcwd()
